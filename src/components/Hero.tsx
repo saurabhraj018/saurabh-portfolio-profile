@@ -56,10 +56,10 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto gap-12">
+        <div className="flex flex-col items-center justify-center max-w-4xl mx-auto text-center">
           
-          {/* Left Content */}
-          <div className={`flex-1 text-center lg:text-left transition-all duration-1000 ${
+          {/* Main Content - Centered */}
+          <div className={`transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
             
@@ -96,13 +96,13 @@ const Hero = () => {
             </div>
 
             {/* Enhanced Description */}
-            <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl leading-relaxed">
               Passionate about creating innovative web solutions with modern technologies. 
               Specialized in React, C++, and building scalable applications that make a difference.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button
                 onClick={() => scrollToSection('#projects')}
                 className="group px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -127,7 +127,7 @@ const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex justify-center lg:justify-start space-x-6">
+            <div className="flex justify-center space-x-6">
               <a href="https://github.com/saurabhraj018" target="_blank" rel="noopener noreferrer" 
                  className="group p-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-white/60 hover:text-pink-400 hover:border-pink-400/50 transition-all duration-300 hover:scale-110">
                 <Github size={24} />
@@ -140,47 +140,6 @@ const Hero = () => {
                  className="group p-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 text-white/60 hover:text-pink-400 hover:border-pink-400/50 transition-all duration-300 hover:scale-110">
                 <Mail size={24} />
               </a>
-            </div>
-          </div>
-
-          {/* Right Side - Profile Image */}
-          <div className={`flex-1 flex justify-center lg:justify-end transition-all duration-1000 delay-300 ${
-            isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-          }`}>
-            <div className="relative">
-              {/* Glowing border effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 rounded-3xl blur-sm opacity-75 animate-pulse"></div>
-              
-              {/* Main image container */}
-              <div className="relative w-80 h-96 md:w-96 md:h-[500px] rounded-3xl overflow-hidden bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-white/10">
-                <img
-                  src="/lovable-uploads/f4665fb4-ee88-426e-96db-a356cf87a6fa.png"
-                  alt="Saurabh Raj"
-                  className="w-full h-full object-cover object-center"
-                />
-                
-                {/* Overlay gradient for better text visibility */}
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 via-transparent to-transparent"></div>
-                
-                {/* Floating tech icons */}
-                <div className="absolute top-4 right-4 flex flex-col gap-2">
-                  <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center backdrop-blur-sm border border-white/10">
-                    <span className="text-xs font-bold text-blue-400">C++</span>
-                  </div>
-                  <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center backdrop-blur-sm border border-white/10">
-                    <span className="text-xs font-bold text-cyan-400">JS</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating achievement badges */}
-              <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm border border-green-400/30 rounded-lg px-3 py-2">
-                <span className="text-sm text-green-400 font-medium">B.Tech CSE</span>
-              </div>
-              
-              <div className="absolute -top-4 -left-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-400/30 rounded-lg px-3 py-2">
-                <span className="text-sm text-purple-400 font-medium">KIIT '26</span>
-              </div>
             </div>
           </div>
         </div>
