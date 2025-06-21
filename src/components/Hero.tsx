@@ -69,6 +69,40 @@ const Hero = () => {
               <span className="text-sm text-gray-300 font-medium">AI-Enhanced Portfolio</span>
             </div>
 
+            {/* Profile Picture */}
+            <div className="mb-8 relative">
+              <div className="relative w-48 h-48 mx-auto">
+                {/* Animated border rings */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 animate-spin" style={{ animationDuration: '8s' }}></div>
+                <div className="absolute inset-1 rounded-full bg-gradient-to-r from-purple-900 to-violet-900"></div>
+                
+                {/* Profile image container */}
+                <div className="absolute inset-2 rounded-full overflow-hidden border-2 border-white/20 backdrop-blur-sm">
+                  <img 
+                    src="https://i.postimg.cc/sfh6NzWR/PHOTO-2.jpg" 
+                    alt="Saurabh Raj"
+                    className="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                
+                {/* Floating particles around image */}
+                <div className="absolute inset-0">
+                  {[...Array(8)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="absolute w-2 h-2 bg-pink-400/60 rounded-full animate-pulse"
+                      style={{
+                        left: `${20 + Math.cos((i * Math.PI * 2) / 8) * 60}%`,
+                        top: `${20 + Math.sin((i * Math.PI * 2) / 8) * 60}%`,
+                        animationDelay: `${i * 0.3}s`,
+                        animationDuration: `${2 + (i % 3)}s`
+                      }}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
               <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 Saurabh
